@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="CSS/register.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="wrap">
+        <section id="formSection">
+            <div class="header">
+                <img src="https://www.instagram.com/static/images/web/logged_out_wordmark.png/7a252de00b20.png" alt="">
+                <p>친구들의 사진과 동영상을 보러면<br>
+                가입하세요.</p>
+                <button class="facebook"><i class="bi bi-facebook" style="margin-right: 1em; font-size: 16px;"></i>Facebook으로 로그인</button>
+            </div>
+            <div class="divider">
+                <div>
+                    <hr class="hr-style">
+                </div>
+                <div>
+                    <p>
+                        또는
+                    </p>
+                </div>
+                <div>
+                    <hr class="hr-style">
+                </div>
+            </div>
+            <!--유효성 검사-->
+            <!--
+                required : 이속성을 사용시 사용자가 해당 input태그에 정보를 입력하지 않을 경우 경고창이 뜬다.
+                minlength : 글자수 제한으로 숫자를 입력할 경우 사용자는 해당 정보를 개발자가 입력한 숫자 이상으로 입력해야 한다.
+            -->
+            <div class="form">
+                <form action="">
+                    <input type="email" class="input-style" placeholder="휴대폰 번호 또는 이메일 주소" required>
+                    <input type="text" class="input-style" placeholder="성명" required>
+                    <input type="text" class="input-style" placeholder="사용자 이름" required>
+                    <input type="password" class="input-style" placeholder="비밀번호" required>
+                    <input type="password" class="input-style" placeholder="비밀번호 확인" required>
+                    <input type="submit" value="가입" class="submit-style">
+                </form>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

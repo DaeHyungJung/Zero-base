@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textarea태그</title>
+</head>
+<body>
+    <!--
+        textarea : input태그와는 다르게 사용자가 내용을 여러줄 입력하는 ui를 만들때 사용하는 태그 사용자가 임의로 늘리거나 줄일수 있다.
+        >cols : textarea태그의 좌우 크기
+        >rows : textarea태그의 상하 크기
+        >resize : none = 사용자가 textarea크기를 임의로 바꾸지 못하게 하는 style속성
+    -->
+    <form action="./result.html" method="get">
+        <h1>게시글 작성</h1>
+        <div>
+            <label>
+                제목 : <br>
+                <input type="text" name="" id="" value="123">
+            </label>
+        </div>
+        <div>
+            <label>
+                내용 : <br>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </label>
+        </div>
+
+        <div>
+            <label>
+                내용 : <br>
+                <textarea name="" id="" cols="30" rows="10" style="resize: none;"></textarea>
+            </label>
+        </div>
+        <br>
+        <input type="submit" value="등록">
+    </form>
+</body>
+</html>

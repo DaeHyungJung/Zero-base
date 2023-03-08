@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <style>
+        body{
+            margin: 20px;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid lightgray;
+            position: relative;
+            border-radius: 14px;
+            overflow: hidden;
+        }
+        .box-overloay{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 100px;
+            left: 0;
+            transition: all 0.5s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 14px;
+            background-color: blue;
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+        }
+        .box-overloay p{
+            margin: 0px;
+            font-size: 10px;
+        }
+        /*
+        transition : 움직임 몇초동안움직일건지;
+                     >움직임을 부드럽게 몇초동안 움직이게 하는 css속성
+        */
+        .box:hover .box-overloay{
+            top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box-overloay">
+            <p>판다코딩</p>
+            <p>xxx-xxxx-xxxx</p>
+        </div>
+    </div>
+</body>
+</html>

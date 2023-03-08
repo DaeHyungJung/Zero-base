@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스추적transform</title>
+    <style>
+        #targetBox{
+            width: auto;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            padding: 20px;
+        }
+        #targetBox h1{
+            margin: 0;
+            padding: 20px;
+            font-size: 1.5rem;
+        }
+        #blind{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="targetBox">
+        <div id="blind"></div>
+        <h1>안녕하세요! 판다코딩입니다.</h1>
+    </div>
+
+    <script>
+        var targetBox = document.querySelector("#targetBox");
+        var blind = document.querySelector("#blind");
+        targetBox.addEventListener("mousemove",function(e){
+            blind.style.transform = "translateX("+e.clientX+"px)"
+        })
+        /*
+        .offsetwidth : 해당 컨텐츠의 padding,border값을 포함한 width 값을 출력
+        .clientwidth : 해당 컨텐츠의 padding은 포함하나 border값을 뺀 width값
+        */
+    </script>
+</body>
+</html>

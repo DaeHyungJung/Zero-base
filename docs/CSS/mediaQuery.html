@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media query</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 4px solid red;
+        }
+        @media screen and (max-width: 1260px) {
+            .box{
+                width: 80%;
+                background-color: red;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .box{
+                width: 90%;
+                background-color: blue;
+            }
+        }
+        @media screen and (max-width: 576px) {
+            .box{
+                background-color: green;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!--
+        media query : 반응형 웹디자인할때 사용하는 css속성으로 사용자가 보는 브라우저의 크기에 따라 ui의 배치를 다르게 할수있다.
+                      >max-width : px = 사용자가 보는 화면이 입력한 숫자 이하가 되면 css속성을 바꾼다.
+                      >min-width : px = 사용자가 보는 화면이 입력한 숫자 이상이 되면 css속성을 바꾼다.
+    -->
+    <div class="box"></div>
+</body>
+</html>

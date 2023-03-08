@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        style tag는 왜 head 안에 선언되는가?
+        style tag : BODY태그를 읽기 이전에 알아야 할 정보 이 HTML 파일의 기본적인 정보
+        style tag는 body tag안에 넣어도 문제는 없으나
+        HTML 파일의 정보량이 많아지면 사용자가 브라우저를 켰을 경우 
+        body tag의 컨텐츠를 읽고 난뒤 style tag가 적용되는 불상사가 일어날수있다.
+    -->
+    <style>
+        .title{
+            font-size: 36px;
+            color: red;
+            font-weight: bold;
+        }
+        #heading{
+            font-size: 36px;
+            color: blue;
+            font-weight: bold;
+        }
+        p{
+            font-size: 36px;
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+    <!--
+        inline속성 -> id -> class -> 태그이름
+        *먼저 적용되는순서는 왼쪽부터 오른쪽 순이다.
+    -->
+</head>
+<body>
+    <p id="heading">
+        안녕하세요
+    </p>
+    <p class="title" id="">
+        판다코딩입니다!
+    </p>
+</body>
+</html>

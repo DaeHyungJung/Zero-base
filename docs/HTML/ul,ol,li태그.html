@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <!--
+        ol : 순서가 있는 목록
+            >start : 번호를 넣게 된다면 그 번호부터 순서가 시작한다.
+            >value : li태그에 쓸수있는 속성으로 번호를 넣게 된다면 그 li태그가 value에 넣은 번호로 바뀌고 그 번호부터 순서가 시작한다.
+        ul : 순서가 없는 목록
+        li : 목록의 내용
+            *li태그안에 또다른 ul이나ol태그를 넣을수 있다.
+    -->
+    <!--
+        기본적으로 ul이나 ol태그를 사용하여 li를 넣을 경우 li태그 왼쪽에 padding이 기본적으로 들어가 있다.
+    -->
+    <ol start="5">
+        <li>가나다</li>
+        <li>ABC</li>
+        <li value="10">DEF</li>
+        <li>마바사</li>
+    </ol>
+
+    <ol style="list-style: none;">
+        <li>가나다</li>
+        <li>ABC</li>
+        <li value="10">DEF</li>
+        <li>마바사</li>
+    </ol>
+
+    <ul style="list-style-type: circle;">
+        <li>가나다</li>
+        <li>마바사</li>
+        <li>ABC</li>
+        <li>DEF</li>
+    </ul>
+
+    <ul style="list-style: none;">
+        <li>가나다</li>
+        <li>마바사</li>
+        <li>ABC</li>
+        <li>DEF</li>
+    </ul>
+    
+</body>
+</html>

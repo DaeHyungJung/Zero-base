@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkbox,radio</title>
+</head>
+<body>
+
+    <form action="./result.html" method="get">
+        <select name="color" id="">
+            <option value="red">빨간색</option>
+            <option value="blue">파란색</option>
+            <option value="green">초록색</option>
+        </select>
+        <!--
+            label : 사용하는 방법은 두가지가 있다. label태그 사이에 해당 컨텐츠를 넣는것
+                   >label태그에 for속성을 주고 그것을 원하는 태그 id값과 동일하게 입력하는것
+        -->
+        <div>
+            <label>
+                모자 : <input type="checkbox" name="kind" id="" value="hat">
+            </label>
+            <label for="top">상의 : </label>
+            <input id="top" type="checkbox" name="kind" id="" value="top">
+            하의 : <input type="checkbox" name="kind" id="" value="bottom">
+            양말 :<input type="checkbox" name="kind" id="" value="socks">
+        </div>
+        <div>
+            남자 : <input type="radio" name="gender" id="" value="man">
+            여자 : <input type="radio" name="gender" id="" value="woman">
+        </div>
+        <input type="submit" value="제출">
+    </form>
+</body>
+</html>

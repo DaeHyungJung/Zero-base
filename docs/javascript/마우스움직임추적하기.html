@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스움직임추적하기</title>
+    <style>
+        #cursor{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: yellow;
+        }
+        body{
+            cursor: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>x : <span id="x"></span>, y : <span id="y"></span></h1>
+    <div id="cursor"></div>
+    <script>
+        window.addEventListener("mousemove",마우스추적);
+        var x = document.querySelector("#x");
+        var y = document.querySelector("#y");
+        var cusor = document.querySelector("#cursor")
+
+        function 마우스추적(event){
+            x.innerHTML = event.clientX;
+            y.innerHTML = event.clientY;
+            cursor.style.left = (event.clientX - 25) + "px";
+            cursor.style.top = (event.clientY - 25) + "px";
+        }
+    </script>
+</body>
+</html>

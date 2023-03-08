@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상선택자</title>
+    <style>
+        a:link{
+            color: blue;
+        }
+        a:visited{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        가상선택자
+        :link = 사용자가 해당 a tag로 사이트를 아직 안가봤을 경우 css속성이 나타나는 가상선택자
+        :visited = 사용자가 해당 a tag로 사이트를 가봤을 경우 css속성이 나타나는 가상선택자
+        :not(x) = 앞에 붙는 tag중에 not()안에 오는 class나 id에 해당이 안되는 태그를 선택할때 사용하는 가상선택자
+        :nth-child(x) = 앞에 붙는 tag의 몇번째인지 선택할때 사용하는 가상선택자
+        :nth-of-type(x) = 앞에 tag가 아닌 class속성을 사용하고 싶은 경우에 사용하는 가상선택자
+        :first-child = 해당 tag의 첫번째
+        :last-child =  해당 tag의 마지막
+        :last-of-type = 해당 class의 마지막
+        :first-of-type = 해당 class의 첫번째
+    -->
+    <a href="" title="Naver">테스트</a>
+    <a href=""></a>
+</body>
+</html>

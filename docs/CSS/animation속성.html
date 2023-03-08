@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dry</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            transform:  translateY(100px);
+            transition: all 1s ease-in-out;
+        }
+        .box:hover{
+            transform: translateY(0px);
+        }
+        @keyframes wiggle {
+            0%{
+                transform: rotate(0deg);
+                color: red;
+            }
+            25%{
+                transform: rotate(10deg);
+                color: orange;
+            }
+            50%{
+                transform: rotate(0deg);
+                color: yellow;
+            }
+            75%{
+                transform: rotate(-10deg);
+                color: green;
+            }
+            100%{
+                transform: rotate(0deg);
+                color: blue;
+            }
+        }
+        .wiggle{
+            display: inline-block;
+            animation: wiggle 5s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <h1 class="wiggle">안녕하세요!</h1>
+</body>
+</html>

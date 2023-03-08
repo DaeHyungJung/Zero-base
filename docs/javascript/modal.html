@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modal</title>
+    <style>
+        body,p{
+            margin: 0px;
+        }
+        .modalDiv{
+            display: none;
+        }
+        .bg{
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+        }
+        .modal{
+            position: relative;
+            z-index: 10;
+            background-color: #fff;
+            width: 50%;
+            left: 25%;
+            top: 25%;
+            padding: 20px;
+            border-radius: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">제목입니다.</h1>
+    <p>내용입니다.</p>
+    <p>내용입니다.</p>
+    <p>내용입니다.</p>
+    <button>수정하기</button><br>
+    <button onclick="모달창열기()">삭제하기</button>
+
+    <div class="modalDiv">
+        <div class="bg" onclick="모달창닫기()"></div>
+        <div class="modal">
+            <p>정말 삭제하시겠습니까?</p>
+            <button onclick="모달창닫기()">취소</button>
+            <button id="delete" >삭제</button>
+        </div>
+    </div>
+    <script>
+        /*
+        1. html/css ui를 만듭니다.
+        2. css로 숨깁니다.
+        3. js로 다시 나타나게 합니다.
+
+        dry : Don't Repeat Your code
+        */
+       function 모달창열기(){
+        var 모달 = document.querySelector(".modalDiv");
+        모달.style.display = "block";
+       };
+       function 모달창닫기(){
+        var 모달 = document.querySelector(".modalDiv");
+        모달.style.display = "none";
+       }
+       /*
+       getElementsByClassName("") : 모든 클래스를 선택하지만 배열이라는 자바스크립트의 특수한 배열로 저장된다.
+       querySelector("") : 입력한 선택자를 선택하지만 하나만 선택한다.
+       */
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상요소</title>
+    <style>
+        h1::first-letter{
+            color: red;
+        }
+        p::first-line{
+            color: lightblue;
+            font-size: 24px;
+        }
+        div::after{
+            content: " 판다";
+        }
+        div::before{
+            content: "코딩 ";
+        }
+    </style>
+</head>
+<body>
+    <!--
+        ::first-letter = p태그 나 h태그 같은 텍스트 컨텐츠에만 쓸수있으며 텍스트의 첫번째 줄을 선택한다.
+        ::first-line = p태그 나 h태그 같은 텍스트 컨텐츠에만 쓸수있으며 텍스트의 첫번째 글자를 선택한다.
+        ::after = 태그의 뒷쪽 부분에 가상요소를 만든다.
+        ::before = 태그의 앞쪽 부분에 가상요소를 만든다.
+    -->
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, praesentium, ipsa ratione, vel pariatur molestiae illo quam vitae voluptatem laborum assumenda eaque mollitia veritatis sunt nemo optio voluptatibus rem minus.
+    </p>
+    <h1>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui error quasi magnam dicta illum sapiente distinctio, maiores voluptate, at assumenda cumque laborum nobis consectetur rem repudiandae ad quibusdam similique!
+    </h1>
+    <div>안녕하세요</div>
+</body>
+</html>

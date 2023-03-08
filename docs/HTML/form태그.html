@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form태그</title>
+</head>
+<body>
+    <!--
+        form태그 : 사용자와 웹사이트를 소통할수 있게 만들어주는 기본적인 tag
+        >대표적으로 로그인창에 있는 ID PW가 대표적이다.
+        >action : 사용자가 웹사이트에 정보를 제출했을때 요청을 보내는 장소
+        >method : 사용자가 웹사이트에 정보를 제출하는 방식
+         -get : 주소에 데이터를 추가하여 전달하는 방식으로 주소에 그대로 들어난다. 전송할 수 있는 크기가 제한된다. 상대경로로 들어가기 때문에 서버가 없어도 해당 페이지에 들어갈수있다.
+         -post : 데이터를 별도로 전달하는 방식이라 제한이 없다. 데이터에 들어나지 않아 보안이 좋다. 절대경로로 들어가기 때문에 서버가 있어야만 해당 페이지에 들어갈수있다.
+    -->
+    <form action="./result.html" method="get">
+        <div>
+            ID<input name="id" type="text">
+        </div>
+        <div>
+            PW<input name="password" type="password">
+        </div>
+        <input type="submit" value="로그인">
+    </form>
+</body>
+</html>

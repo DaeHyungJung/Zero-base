@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input태그</title>
+</head>
+<body>
+    <!--
+        input태그 : inline요소로 type이 여러개 있다.
+        >type : submit = 대표적으로 로그인창으로 버튼이랑 비슷하다.
+        >type : password = 이 타입을 사용하게 되면 사용자가 입력하는 텍스트가 검은점으로 출력된다.
+        >type : email = 사용자가 해당 input에 이메일 양식을 안지킬 경우 경고창이 뜬다.
+        >name : 사용자가 input태그에 정보를 입력후 제출하면 그 정보의 name을 form태그의 action과 대조한다.
+        >placeholder : 사용자에게 해당 input태그에 어떠한 값을 입력해야 하는지 알려주는 정보
+    -->
+    <form action="./result.html" method="get">
+        <input type="email" name="" placeholder="email를 입력해주세요">
+        <input type="password" name="" placeholder="pw를 입력해주세요">
+        <input type="submit" value="로그인">
+        <input type="button" value="로그인">
+        <button type="submit">로그인</button>
+        <button>로그인</button>
+    </form>
+</body>
+</html>

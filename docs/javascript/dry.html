@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dry</title>
+    <style>
+        body,p{
+            margin: 0px;
+        }
+        .modalDiv{
+            display: none;
+        }
+        .bg{
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+        }
+        .modal{
+            position: relative;
+            z-index: 10;
+            background-color: #fff;
+            width: 50%;
+            left: 25%;
+            top: 25%;
+            padding: 20px;
+            border-radius: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">제목입니다.</h1>
+    <p>내용입니다.</p>
+    <p>내용입니다.</p>
+    <p>내용입니다.</p>
+    <button>수정하기</button><br>
+    <button onclick="모달창열고닫기('block')">삭제하기</button>
+
+    <div class="modalDiv">
+        <div class="bg" onclick="모달창열고닫기('none')"></div>
+        <div class="modal">
+            <p>정말 삭제하시겠습니까?</p>
+            <button onclick="모달창열고닫기('none')">취소</button>
+            <button id="delete" >삭제</button>
+        </div>
+    </div>
+    <script>
+        /*
+        1. html/css ui를 만듭니다.
+        2. css로 숨깁니다.
+        3. js로 다시 나타나게 합니다.
+
+        dry : Don't Repeat Your code
+        */
+       function 모달창열고닫기(인자){
+        var 모달 = document.querySelector(".modalDiv");
+        모달.style.display = 인자;
+       }
+    </script>
+</body>
+</html>

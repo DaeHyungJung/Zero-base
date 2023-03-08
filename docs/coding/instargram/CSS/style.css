@@ -1,0 +1,136 @@
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #c6c6c6;
+}
+.wrap{
+    background-color: #fff;
+    width: 375px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+.instargram{
+    width: 100%;
+    height: 550px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 375px 1fr;
+    grid-template-areas: 
+    "header"
+    "img"
+    "footer";
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
+.instargram>div{
+    width: 100%;
+    height: 100%;
+}
+.header{
+    grid-area: header;
+    padding: 5px 10px;
+}
+.header-left{
+    float: left;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+.header-img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    margin-right: 10px;
+}
+.header-right{
+    float: right;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.right-menu{
+    cursor: pointer;
+    user-select: none;
+}
+.img{
+    grid-area: img;
+    clear: both;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+}
+.footer{
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px auto auto;
+    grid-template-areas: 
+    "top-left top-center top-right"
+    "like like like"
+    "comment comment comment";
+}
+.top-left{
+    grid-area: top-left;
+    display: flex;
+    font-size: 10px;
+    justify-content: space-around;
+    align-items: center;
+    user-select: none;
+}
+.top-left span{
+    cursor: pointer;
+}
+.top-left #fill-heart{
+    display: none;
+    fill: red;
+}
+.top-left span:first-child:hover{
+    color: red;
+}
+.top-center{
+    grid-area: top-center;
+}
+.top-center>ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    height: 100%;
+}
+.top-center>ul li{
+    width: 5px;
+    height: 5px;
+    border: 1px solid black;
+    background-color: lightgray;
+    border-radius: 50%;
+    margin: 3px;
+    user-select: none;
+    cursor: pointer;
+}
+.top-right{
+    grid-area: top-right;
+    display: flex;
+    font-size: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.like{
+    grid-area: like;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0 10px;
+}
+.comment{
+    grid-area: comment;
+    margin: 0 10px;
+    font-size: 10px
+}
+.top-center>ul>.on{
+    background-color: #000;
+}
