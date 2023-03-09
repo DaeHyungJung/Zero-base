@@ -1,0 +1,22 @@
+//extend : css 스타일 확장
+//% : 임시 클래스
+%btn{
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: inherit;
+    border: 1px solid lightgray;
+    border-radius: 14px;
+}
+
+.btn-1{
+    @extend %btn;
+    border: 1px solid red;
+    color: red;
+    font-weight: bold;
+}
+.btn-2{
+    @extend %btn;
+    border: 1px solid blue;
+    color: blue;
+    font-weight: bold;
+}

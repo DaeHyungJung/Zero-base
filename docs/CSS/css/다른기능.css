@@ -1,0 +1,73 @@
+@charset "UTF-8";
+.box:nth-of-type(1) {
+  width: 100px;
+}
+
+.box:nth-of-type(2) {
+  width: 100px;
+}
+
+.box:nth-of-type(3) {
+  width: 100px;
+}
+
+.box:nth-of-type(4) {
+  width: 100px;
+}
+
+.box:nth-of-type(5) {
+  width: 100px;
+}
+
+.box:nth-of-type(6) {
+  width: 100px;
+}
+
+.box:nth-of-type(7) {
+  width: 100px;
+}
+
+.box:nth-of-type(8) {
+  width: 100px;
+}
+
+.box:nth-of-type(9) {
+  width: 100px;
+}
+
+.box:nth-of-type(10) {
+  width: 100px;
+}
+
+.box {
+  background-color: orange;
+}
+
+.box {
+  background-color: blue;
+}
+
+.box {
+  background-color: red;
+}
+
+.box {
+  background-color: yellow;
+}
+
+.box-1 {
+  background-color: orange;
+}
+
+.box-2 {
+  background-color: blue;
+}
+
+.box-3 {
+  background-color: yellow;
+}
+
+/*가정문*/
+p {
+  color: blue;
+}

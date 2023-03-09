@@ -1,0 +1,19 @@
+//변수 : 변하는 수
+//$ : 기호 + "작명" : "저장할 내용";
+$primary-color : #333;
+$color : #00498c;
+
+body{
+    .box{
+        width: 100%;
+        background-color: $color;
+        color: #fff;
+        //& : 부모요소를 선택할수있는 sass(scss)만의 선택자
+        &:hover{
+            background-color: #fff;
+        }
+    }
+    #test{
+        color: $color;
+    }
+}

@@ -1,0 +1,39 @@
+//반복문 : 변수에 숫자를 x~y까지 담고 그 변수를 css에 담으면 반복되는 문장
+
+@for $i from 1 through 10{
+    .box:nth-of-type(#{$i}){
+        width: 100px;
+    }
+}
+
+$list : orange, blue, red, yellow;
+$object : (
+    1 : orange,
+    2 : blue,
+    3 : yellow
+);
+
+@each $color in $list {
+    .box{
+        background-color: $color;
+    }
+}
+@each $key, $color-2 in $object{
+    .box-#{$key}{
+        background-color: $color-2;
+    }
+}
+
+/*가정문*/
+//변수의 담긴 값이 맞으면 해당 css속성을 적용하고 아니면 다른 css속성을 적용한다.
+
+$statement: blue;
+
+p{
+    @if $statement ==blue{
+        color: blue;
+    }
+    @else{
+        color: red;
+    }
+}

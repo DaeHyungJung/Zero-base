@@ -1,0 +1,11 @@
+body .box {
+  width: 100%;
+  background-color: #00498c;
+  color: #fff;
+}
+body .box:hover {
+  background-color: #fff;
+}
+body #test {
+  color: #00498c;
+}
