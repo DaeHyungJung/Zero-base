@@ -8,9 +8,28 @@
     <link rel="stylesheet" href="css/스크롤바추적하기.css">
 </head>
 <body>
-  
-
+    <div class="scroll-outer">
+        <div class="scroll-inner"></div>
+    </div>
     <script>
+        /*
+        문서의 전체 높이 : document.documentElement.scrollHeight
+        브라우저가 보여주고 있는 높이 : window.innerHeight
+        스크롤의 위치 : document.documentElement.scrollTop
+
+        스크롤의 위치 / (문서의 전체 높이 - 브라우저가 보여주고 있는 높이) * 100%
+        Math.round() : 반올림
+        */
+       var scrollY = 0;
+       var target = document.querySelector(".scroll-inner")
+        window.addEventListener("scroll",function(e){
+            var documentHeight = document.documentElement.scrollHeight;
+            var browserHeight = window.innerHeight;
+            scrollY = document.documentElement.scrollTop;
+            var percent = scrollY / (documentHeight - browserHeight) * 100;
+            target.style.height = Math.round(percent) + "%";
+            console.log(percent,Math.round(percent))
+        })
     </script>
 </body>
 </html>
