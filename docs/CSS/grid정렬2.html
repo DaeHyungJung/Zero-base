@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .container{
+            width: 400px;
+            height: 600px;
+            border: 1px solid black;
+            color: white;
+            font-weight: bold;
+
+            display: grid;
+            grid-template-columns:  1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas: 
+            "top top"
+            "left right"
+            "bottom bottom";
+        }
+
+        .top{
+            background: red;
+            grid-area: top;
+        }
+        .left{
+            background: blue;
+            grid-area: left;
+        }
+        .right{
+            background: green;
+            grid-area: right;
+        }
+
+        .bottom{
+            background: purple;
+            grid-area: bottom;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top"></div>
+        <div class="left box"></div>
+        <div class="right box"></div>
+        <div class="bottom"></div>
+    </div>
+</body>
+</html>
