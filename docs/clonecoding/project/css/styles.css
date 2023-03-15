@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   min-width: 320px;
   line-height: normal;
@@ -337,6 +338,111 @@ textarea::-webkit-outer-spin-button {
   color: #fff;
 }
 
+.order-info-area {
+  padding: 10px 18px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  background-color: #e7f7ff;
+}
+.order-info-area .info-main-title {
+  line-height: 39px;
+}
+.order-info-area .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: -0.3px;
+  color: #333;
+}
+.order-info-area .title .ico-n-logo {
+  margin-right: 6px;
+  width: 24px;
+  height: 24px;
+}
+
+.tab-switch-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 12px;
+}
+.tab-switch-box .tab-switch {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: rgba(0, 0, 0, 0.06);
+  line-height: 40px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #666;
+  letter-spacing: -0.3px;
+  text-align: center;
+}
+.tab-switch-box .tab-switch.is-active {
+  position: relative;
+  -webkit-box-flex: 1.2;
+      -ms-flex-positive: 1.2;
+          flex-grow: 1.2;
+  border: 1px solid #333;
+  background-color: #fff;
+  font-size: 15px;
+  color: #333;
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.05);
+          box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.05);
+}
+.tab-switch-box .tab-switch.is-active::after {
+  /*또다른 말풍선 만드는 방법*/
+  content: "";
+  position: absolute;
+  bottom: -9px;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  border: 1px solid;
+  border-width: 0 1px 1px 0;
+  background-color: #fff;
+  -webkit-transform: rotate(45deg) translateX(-50%);
+          transform: rotate(45deg) translateX(-50%);
+}
+.tab-switch-box .tab-switch.is-active .ico-check {
+  display: inline-block;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+.tab-switch-box .ico-check {
+  display: none;
+}
+
+.info-main-notice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 16px;
+  padding: 12px 16px;
+  border-radius: 2px;
+  background-color: #fff;
+  font-size: 14px;
+  letter-spacing: -0.3px;
+  color: #333;
+}
+.info-main-notice.alert {
+  color: #ff3d3b;
+  font-weight: 700;
+}
+.info-main-notice .ico-clock {
+  margin-right: 6px;
+}
+
 .container {
   padding-top: 94px;
 }
@@ -344,5 +450,4 @@ textarea::-webkit-outer-spin-button {
 .common-inner {
   margin: 0 auto;
   max-width: 720px;
-  background-color: red;
 }
