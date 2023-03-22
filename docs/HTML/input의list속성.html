@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list</title>
+</head>
+<body>
+    <form action="" method="get">
+
+        <label for="movie">좋아하는 영화: </label>
+        <input type="text" id="movie" name="movie" list="movie-list">
+
+        <datalist id="movie-list">
+            <option>주토피아</option>
+            <option>주토피아2</option>
+            <option>주토피아3</option>
+            <option>주토피아4</option>
+            <option>주토피아5</option>
+        </datalist>
+
+        <input type="submit">
+    </form>
+    <!-- 
+        datalist : select와 다르게 밑에 선택하는게 뜨긴 하지만 사용자가 마음대로 수정할수있다.
+     -->
+</body>
+</html>
