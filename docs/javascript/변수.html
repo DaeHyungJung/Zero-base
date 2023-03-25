@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수</title>
+</head>
+<body>
+    
+    <script>
+        const name = "Mike";
+        const age = 30;
+
+        const name1 = "Mike";
+        const name2 = "Mike";
+        const name3 = "Mike";
+
+        const message = "I'm a boy";
+        const message2 = 'I\'m a boy';
+        // 문자열을 지정할때 ''만 사용하고 싶으면 \를 앞에 붙이면 된다.
+
+        const message3 = `My name is ${name}`;
+        // `은 문자열 내부에 변수를 지정할때 사용하면 편하다.
+        
+        const message4 = `나는 ${30+1}살 입니다.`;
+
+        // 숫자형
+        const PI = 3.14;
+
+        console.log(1 + 2); // 더하기
+        console.log(10 - 3); // 빼기
+        console.log(3 * 2); // 곱하기
+        console.log(6 / 3); // 나누기
+        console.log(6 % 4); // 나머지
+        // 자바스크립트에서 변수를 선언할때는, 변하지 않는 값은 const, 변할 수 있는 값은 let으로 선언하세요.
+        // let : 바꾸려면 바꿀수있는 상수
+        // const : 절대 바뀌지 않는 상수 수정x
+    </script>
+</body>
+</html>
