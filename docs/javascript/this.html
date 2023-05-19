@@ -1,0 +1,162 @@
+<div></div>
+<button id="버튼">버튼이에요</button>
+<script>
+
+    console.log(this); //window
+
+    function 함수(){
+        console.log(this)
+    };
+
+    함수(); //window
+
+    var 오브젝트 = {
+        data : 'kim',
+        함수 : function(){
+            console.log(this)
+        }
+    }
+
+    오브젝트.data; //'kim'
+
+    오브젝트.함수(); //오브젝트
+
+    var 오브젝트2 = {
+        data : {
+            함수 : function(){
+                console.log(this)
+            }
+        }
+    }
+
+    오브젝트2.data.함수() //오브젝트2.data
+
+    var 오브젝트3 = {
+        data : {
+            함수 : () => {
+                console.log(this)
+            }
+        }
+    }
+
+    오브젝트3.data.함수() //화살표 함수의 특징 : this값을 함수 밖에 있던거 그대로 씀
+    //window
+
+    var 오브젝트4 = {
+        이름들 : ['김','이','박'],
+        함수 : function(){
+            console.log(this) //오브젝트4
+            오브젝트4.이름들.forEach(function(){
+                console.log(this); //window
+            })
+        }
+    }
+    오브젝트4.함수()
+
+    var 오브젝트5 = {
+        이름들 : ['김','이','박'],
+        함수 : function(){
+            console.log(this)
+            오브젝트5.이름들.forEach(() => {
+                console.log(this); //오브젝트5
+            })
+        }
+    }
+    오브젝트5.함수()
+    
+    var 사람 = {
+        name: '손흥민',
+        sayHi : function(){
+            console.log(`안녕 나는 ${사람.name}`)
+        }
+    }
+
+    사람.sayHi()
+
+    var pants = 0;
+    var socks = 100;
+    function 해체분석기(a,b,c){
+        if(b == 0){
+            console.log(a[0]+'다팔렸어요'+a[1]+c)
+        }else{
+            console.log(a[1]+b+a[0]+c)
+        }
+    }
+    해체분석기`바지${pants} 양말${socks}`
+
+    // 1. 1,2,3,김,밥
+    // 2. you
+    // 3. 9
+    // 4. 15
+    // 5. ...rest return rest
+    // 6. Math.max(...numbers)
+    // 7. a.split('').sort().join('')
+    // 8. 
+
+    function 함수(a=1,b=2){
+        console.log(a+b)
+    }
+    함수(null,null)
+
+    function 수구(name,age){
+        this.name = name;
+        this.age = age;
+    };
+    var 학생1 = new 수구('Kim',20)
+    var 학생2 = new 수구('Park',21)
+    var 학생3 = new 수구('Lee',22)
+
+    class 강아지 {
+        constructor(품종,색깔){
+            this.type = 품종;
+            this.color = 색깔;
+        }
+        나이먹기(){
+            if(this instanceof 고양이){
+                return this.age + 1
+            }
+        }
+    }
+
+    var 강아지1 = new 강아지('말티즈','white');
+    console.log(강아지1)
+
+    class 고양이 extends 강아지{
+        constructor(품종,색깔,나이){
+            super(품종,색깔)
+            this.age = 나이
+        }
+    }
+
+    var 고양이1 = new 고양이('코숏','white',5)
+    console.log(고양이1.나이먹기())
+
+    class Unit{
+        constructor(){
+            this.공격력 = 5
+            this.체력 = 100
+        }
+        get battlePoint(){
+            return this.공격력 + this.체력
+        }
+        set heal(힐력){
+            return this.체력 + 힐력
+        }
+    }
+
+    var data = {
+        odd: [],
+        even: [],
+        setter(...rest){
+            rest.map((x) => x%2 == 0 ? this.even.push(x) : this.odd.push(x))
+        },
+        get getter(){
+            return [...this.odd,...this.even].sort()
+        }
+    }
+
+    data.setter(1,2,3,4,5)
+    console.log(data.odd)
+    console.log(data.getter)
+
+</script>
