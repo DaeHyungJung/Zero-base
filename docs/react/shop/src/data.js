@@ -1,4 +1,8 @@
-let data = [
+import { createSlice } from '@reduxjs/toolkit'
+
+let data = createSlice({
+  name : 'data',
+  initialState : [
     {
       id : 0,
       title : "White and Black",
@@ -19,6 +23,15 @@ let data = [
       content : "Born in the States",
       price : 130000
     }
-  ] 
+  ],
+  reducers : {
+    setShoes(state,result){
+      state = [...state,...result.payload]
+      return state
+    }
+  }
+})
+
+export let { setShoes } = data.actions
 
 export default data

@@ -1,17 +1,22 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useState } from 'react';
 import { Navbar,Container,Nav,Row,Col } from 'react-bootstrap';
-import data from './data.js';
-import { Routes, Route, Link, useNavigate, Outlet } from 'react-router-dom'
+import { Routes, Route, useNavigate, Outlet } from 'react-router-dom'
 import Detail from './routes/Detail.js';
 import axios from 'axios'
 import Cart from './routes/Cart'
+import { useDispatch, useSelector } from 'react-redux';
+import { setShoes } from './data.js';
+import { useEffect } from 'react';
 
 function App() {
 
-  let [shoes,setShoes] = useState(data);
+  let obj = {name : 'kim'};
+  localStorage.setItem('data',JSON.stringify(obj))
+
   let navigate = useNavigate();
+  let dispatch = useDispatch();
+  let data = useSelector((state) => {return state.data});
 
   return (
     <div className="App">
@@ -34,9 +39,9 @@ function App() {
           <Container>
             <Row>
               {
-                shoes.map((a,b) => {
+                data.map((a,b) => {
                   return(
-                    <Card shoes = {shoes} b = {b} navigate={navigate}/>
+                    <Card b = {b} navigate={navigate} data = {data}/>
                   )
                 })
               }
@@ -45,15 +50,14 @@ function App() {
           <button onClick={() => {
             axios.get('https://codingapple1.github.io/shop/data2.json')
             .then((result) => {
-              let copy = [...shoes,...result.data]
-              setShoes(copy)
+              dispatch(setShoes(result.data))
             }).catch(() => {
               console.log('실패')
             })
           }}>버튼</button>
           </>
         }/>
-        <Route path='/detail/:id' element={ <Detail shoes = {shoes}/> }/>
+        <Route path='/detail/:id' element={ <Detail data = {data}/> }/>
         <Route path="*" element={ <div>없는페이지예여</div> }/>
         <Route path='/cart' element={<Cart/>}/>
 
@@ -83,10 +87,12 @@ function About(){
 
 function Card(props){
   return(
-      <Col onClick={() => {props.navigate('/detail/'+props.b)}}>
-        <img src={'https://codingapple1.github.io/shop/shoes'+ (props.b + 1) +'.jpg'} width="80%"/>
-        <h4>{ props.shoes[props.b].title }</h4>
-        <p>{ props.shoes[props.b].content }</p>
+      <Col onClick={() => {
+        props.navigate('/detail/'+props.b);
+      }} key={props.b}>
+        <img src={'https://codingapple1.github.io/shop/shoes' + (props.b + 1) + '.jpg'} width="80%"/>
+        <h4>{ props.data[props.b].title }</h4>
+        <p>{ props.data[props.b].content }</p>
       </Col>
   )
 }
